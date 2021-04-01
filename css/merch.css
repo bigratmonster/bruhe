@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+:root {
+    --dark: #212121;
+    --light: #efefef;
+    --button: 224, 61, 61;
+}
+body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 220%;
+    margin: 0;
+    overflow: hidden;
+    color: var(--dark);
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+flex {
+    display: flex;
+}
+#main-cover {
+    height: 100vh;
+    background-image: url('https://bruhe.bigrat.monster/media/merch_wall.png');
+    background-size: cover;
+    background-repeat: repeat;
+}
+#merch {
+    animation-duration: 1.5s;
+    animation: 1.5s ease-in-out infinite;
+    animation-name: bob;
+    z-index: 1;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+.center-text {
+    text-align: center;
+}
+.image {
+    width: 50vh;
+    height: 50vh;
+}
+.fixed {
+    position:absolute;
+}
+
+button {
+	border: none;
+	font-family: inherit;
+    font-size: inherit;
+	padding: 0.4em 0.2em;
+	color: var(--light);
+	box-shadow: 0.25em 0.25em rgba(var(--button), 30%);
+	background: rgb(var(--button));
+	filter: drop-shadow(0 0 0.5em #fff5);
+	cursor: pointer;
+    margin-top: 0.5em;
+
+}
+button:hover {
+	filter: brightness(120%);
+}
+
+@keyframes bob {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(0.2rem);}
+    100% {transform: translateY(0);}
+}
